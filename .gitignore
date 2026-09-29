@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment and secrets
+.env
+
+# Runtime data (SQLite databases and WAL side files)
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
