@@ -1,0 +1,17 @@
+# Prospector — ingestion sources.
+#
+# Everything that varies between runs (sources, queries, thresholds) lives in
+# this file, not in code. Path overrides: PROSPECTOR_CONFIG environment variable.
+
+hackernews:
+  enabled: true
+  base_url: "https://hn.algolia.com/api/v1"
+  endpoint: "search_by_date"   # recency-sorted search, used for incremental pulls
+  hits_per_page: 50
+  max_pages: 2
+  min_points: 3                # keep low-signal noise out
+  request_delay_seconds: 1.0   # politeness delay between requests
+  queries:
+    - "Ask HN: what product do you wish existed"
+    - "Ask HN: side project ideas"
+    - "Ask HN: what should I build"
